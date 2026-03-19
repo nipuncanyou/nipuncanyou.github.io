@@ -233,10 +233,8 @@
         return;
       }
 
-      // Clear cleanly each frame — no alternating clearRect which caused flickering
+      // Clear fully each frame — canvas is transparent, page bg shows through
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = 'rgba(6,6,12,0.92)';
-      ctx.fillRect(0, 0, w, h);
 
       var scrollY = window.scrollY || window.pageYOffset;
       time++;
